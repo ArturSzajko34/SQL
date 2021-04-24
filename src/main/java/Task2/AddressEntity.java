@@ -2,8 +2,8 @@ package Task2;
 
 import javax.persistence.*;
 
-@Table(name ="address")
-@Entity
+//@Table(name ="address")
+//@Entity
 public class AddressEntity {
 
 

@@ -2,8 +2,8 @@ package Task2;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name = "client")
-@Entity
+//@Table(name = "client")
+//@Entity
 
 public class ClientEntity {
 

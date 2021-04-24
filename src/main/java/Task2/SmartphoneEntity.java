@@ -4,8 +4,8 @@ package Task2;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
-@Table(name = "smartphone")
+//@Entity
+//@Table(name = "smartphone")
 public class SmartphoneEntity {
 
 
