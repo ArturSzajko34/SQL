@@ -1,9 +1,10 @@
-package Task2;
+package Task3;
+
 import javax.persistence.*;
 import java.util.Set;
 
-//@Table(name = "client")
-//@Entity
+@Table(name = "client")
+@Entity
 
 public class ClientEntity {
 
@@ -16,7 +17,7 @@ public class ClientEntity {
 
     @OneToOne(mappedBy = "clientEntity", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private AddressEntity addressEntity;
+    private Task3.AddressEntity addressEntity;
 
 
     @ManyToMany
@@ -45,7 +46,7 @@ public class ClientEntity {
         this.name = name;
     }
 
-    public AddressEntity getAddressEntity() {
+    public Task3.AddressEntity getAddressEntity() {
         return addressEntity;
     }
 

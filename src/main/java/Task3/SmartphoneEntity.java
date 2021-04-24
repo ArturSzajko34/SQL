@@ -1,11 +1,11 @@
-package Task2;
+package Task3;
 
 
 import javax.persistence.*;
 import java.util.Set;
-//
-//@Entity
-//@Table(name = "smartphone")
+
+@Entity
+@Table(name = "smartphone")
 public class SmartphoneEntity {
 
 
@@ -64,5 +64,13 @@ public class SmartphoneEntity {
                 ", model='" + model + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    public Set<ClientEntity> getClientEntitySet() {
+        return clientEntitySet;
+    }
+
+    public void setClientEntitySet(Set<ClientEntity> clientEntitySet) {
+        this.clientEntitySet = clientEntitySet;
     }
 }

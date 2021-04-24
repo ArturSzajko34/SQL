@@ -1,9 +1,9 @@
-package Task2;
+package Task3;
 
 import javax.persistence.*;
-//
-//@Table(name ="address")
-//@Entity
+
+@Table(name ="address")
+@Entity
 public class AddressEntity {
 
 
@@ -17,7 +17,7 @@ public class AddressEntity {
     @OneToOne
     @MapsId
     @JoinColumn(name = "id")
-    private ClientEntity clientEntity;
+    private Task3.ClientEntity clientEntity;
 
 
     public Long getId() {
@@ -44,7 +44,7 @@ public class AddressEntity {
         this.country = country;
     }
 
-    public ClientEntity getClientEntity() {
+    public Task3.ClientEntity getClientEntity() {
         return clientEntity;
     }
 
