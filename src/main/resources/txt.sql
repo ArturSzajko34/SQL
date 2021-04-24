@@ -237,8 +237,12 @@ CREATE INDEX index_manager
 ON employee_asz (manager_id);
 
 
+ // "orders" z jaka tabelą chcemy zrobic połaczenie, clietnId - klucz obcy z tabeli do której robimy połaczenie, klucz głowny z tabeli z której sie łączymy
+ALTER TABLE orders ADD CONSTRAINT fk_smarphone_order FOREIGN KEY (clientId) REFERENCES smartphone(id);
 
-
+ALTER TABLE orders ADD CONSTRAINT fk_smarphone_order FOREIGN KEY (clientId) REFERENCES smartphone(id);
+ALTER TABLE client ADD CONSTRAINT fk_client_order FOREIGN KEY (id) REFERENCES orders(clientId);
+ALTER TABLE address ADD CONSTRAINT fk_address_client_id FOREIGN KEY (id) REFERENCES client(id);
 
 
 

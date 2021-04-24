@@ -1,10 +1,11 @@
-package Task1;
+package Task2;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
-//@Entity
-//@Table(name = "smartphone")
+@Entity
+@Table(name = "smartphone")
 public class SmartphoneEntity {
 
 
@@ -19,14 +20,8 @@ public class SmartphoneEntity {
     @Column(name ="price")
     private int price;
 
-    public SmartphoneEntity(String name, String model, int price) {
-        this.name = name;
-        this.model = model;
-        this.price = price;
-    }
-
-    public SmartphoneEntity() {
-    }
+    @ManyToMany(mappedBy = "smartphoneEntitySet")
+    Set<ClientEntity> clientEntitySet;
 
 
     public Long getId() {
