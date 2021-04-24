@@ -60,4 +60,13 @@ public class ClientEntity {
     public void setSmartphoneEntitySet(Set<SmartphoneEntity> smartphoneEntitySet) {
         this.smartphoneEntitySet = smartphoneEntitySet;
     }
+
+    @Override
+    public String toString() {
+        return "ClientEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", addressEntity=" + addressEntity +
+                '}';
+    }
 }
