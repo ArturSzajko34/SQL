@@ -22,6 +22,11 @@ public class EmployeeEntity {
     @JoinColumn(name="gym_id", nullable=false)
     private GymEntity gymEntity;
 
+    public EmployeeEntity(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+
 
     public Long getId() {
         return id;

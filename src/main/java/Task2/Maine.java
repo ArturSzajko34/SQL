@@ -30,23 +30,23 @@ public class Maine {
         saveSmartphoneForClient(entityManager,firstClient);
 
 
-//        entityManager.getTransaction().begin();
-//        entityManager.persist(firstClient);
-//        entityManager.persist(secondClient);
-//        entityManager.getTransaction().commit();
+        entityManager.getTransaction().begin();
+        entityManager.persist(firstClient);
+        entityManager.persist(secondClient);
+        entityManager.getTransaction().commit();
 
 
 
-//        SmartphoneEntity smartphoneEntity = prepareSmartphone("Xiaomi", "MI10", 2000);
-//        saveSmartphone(entityManager, smartphoneEntity);
-//
-//        AddressEntity addressEntity = prepareAddress("Zielonka", "Polska");
-//        ClientEntity clientEntity = prepareClient("Aleksander");
-////
-//        clientEntity.setAddressEntity(addressEntity);
-//        addressEntity.setClientEntity(clientEntity);
-//
-//        saveClient(entityManager, clientEntity, addressEntity);
+        SmartphoneEntity smartphoneEntity = prepareSmartphone("Xiaomi", "MI10", 2000);
+        saveSmartphone(entityManager, smartphoneEntity);
+
+        AddressEntity addressEntity = prepareAddress("Zielonka", "Polska");
+        ClientEntity clientEntity = prepareClient("Aleksander");
+
+        clientEntity.setAddressEntity(addressEntity);
+        addressEntity.setClientEntity(clientEntity);
+
+        saveClient(entityManager, clientEntity, addressEntity);
 
         entityManager.close();
         entityManagerFactory.close();
