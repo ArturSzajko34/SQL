@@ -95,4 +95,15 @@ public class GymEntity {
     public void setCardTypeEntitySet(Set<CardTypeEntity> cardTypeEntitySet) {
         this.cardTypeEntitySet = cardTypeEntitySet;
     }
+
+    @Override
+    public String toString() {
+        return "GymEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", openFrom=" + openFrom +
+                ", openTo=" + openTo +
+                '}';
+    }
 }

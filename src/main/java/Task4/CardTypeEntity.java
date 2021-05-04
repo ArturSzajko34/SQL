@@ -67,4 +67,13 @@ public class CardTypeEntity {
     public void setCardEntities(List<CardEntity> cardEntities) {
         this.cardEntities = cardEntities;
     }
+
+    @Override
+    public String toString() {
+        return "CardTypeEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

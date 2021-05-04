@@ -42,4 +42,12 @@ public class ClientEntity {
     public void setCardEntityList(List<CardEntity> cardEntityList) {
         this.cardEntityList = cardEntityList;
     }
+
+    @Override
+    public String toString() {
+        return "ClientEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
